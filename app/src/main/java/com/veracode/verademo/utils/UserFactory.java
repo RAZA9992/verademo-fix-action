@@ -86,7 +86,7 @@ public class UserFactory {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		logger.info("Testing Logger 2");
+		logger.info("Testing Logger 1");
 
 		Utils.setCookie(response, COOKIE_NAME, new String(Base64.getEncoder().encode(out.toByteArray())));
 
