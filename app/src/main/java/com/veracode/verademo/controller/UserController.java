@@ -153,6 +153,7 @@ public class UserController {
 			// Get the Database Connection
 			logger.info("Creating the Database connection");
 			Class.forName("com.mysql.jdbc.Driver");
+			logger.info("Testing Logger 2");
 			connect = DriverManager.getConnection(Constants.create().getJdbcConnectionString());
 
 			/* START EXAMPLE VULNERABILITY */
