@@ -79,5 +79,5 @@ jobs:
           createPR: true
           debug: false
           fixType: single
-          files: changed
+          files: all
           cwe: '89, 117, 611'
