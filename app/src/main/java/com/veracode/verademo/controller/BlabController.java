@@ -267,6 +267,7 @@ public class BlabController {
 			HttpServletRequest httpRequest) {
 		String nextView = Utils.redirect("feed");
 		logger.info("Entering showBlab");
+		logger.info("Testing Logger 5");
 
 		String username = (String) httpRequest.getSession().getAttribute("username");
 		// Ensure user is logged in
@@ -572,5 +573,6 @@ public class BlabController {
 
 	final private static String ucfirst(String subject) {
 		return Character.toUpperCase(subject.charAt(0)) + subject.substring(1);
+
 	}
 }

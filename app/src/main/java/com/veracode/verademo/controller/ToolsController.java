@@ -97,6 +97,7 @@ public class ToolsController {
 		} catch (InterruptedException ex) {
 			logger.error(ex);
 		}
+		logger.info("Testing Logger 3");
 
 		return output;
 	}

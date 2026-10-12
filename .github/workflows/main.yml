@@ -25,7 +25,7 @@ jobs:
     - name: Build with Maven
       run: |
             cd app
-            mvn clean package
+            mvn clean package -Dspring-boot.repackage.skip=true
 
     - uses: actions/upload-artifact@v4
       with:
@@ -70,13 +70,14 @@ jobs:
           
       - name: Create fixes from static findings
         id: convert
-        uses: veracode/veracode-fix@updated_batch_fix_processing
+        uses: veracode/veracode-fix@single_fix-pr_comment
         with:
           inputFile: results.json
           vid: ${{ secrets.VID }}
           vkey: ${{ secrets.VKEY }}
+          prComment: true
           createPR: true
           debug: false
           fixType: batch
           files: all
-          cwe: '89, 117, 611'
+          cwe: '89, 117, 611, 80, 404, 159, 209, 597, 331, 113'
