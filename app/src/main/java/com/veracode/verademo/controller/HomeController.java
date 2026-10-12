@@ -22,6 +22,7 @@ public class HomeController {
 
 		model.addAttribute("javax.servlet.forward.request_uri", "/login");
 		model.addAttribute("username", "");
+		logger.info("Testing Logger 3");
 
 		return "login";
 	}
