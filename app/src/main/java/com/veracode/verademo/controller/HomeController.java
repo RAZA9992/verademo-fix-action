@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class HomeController {
-	private static final Logger logger = LogManager.getLogger("VeraDemo:HomeController");
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String renderGet(Model model, HttpServletRequest request, HttpServletResponse response) {
 		// Check if user is already logged in
@@ -23,7 +22,6 @@ public class HomeController {
 
 		model.addAttribute("javax.servlet.forward.request_uri", "/login");
 		model.addAttribute("username", "");
-		logger.info("Testing Logger 3");
 
 		return "login";
 	}
