@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class HomeController {
+	private static final Logger logger = LogManager.getLogger("VeraDemo:HomeController");
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String renderGet(Model model, HttpServletRequest request, HttpServletResponse response) {
-		private static final Logger logger = LogManager.getLogger("VeraDemo:HomeController");
 		// Check if user is already logged in
 		if (Utils.getSessionUserName(request, response) != null) {
 			// Redirect to user's feed
