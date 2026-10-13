@@ -351,6 +351,7 @@ public class ResetController {
 				logger.error(ex);
 			}
 		}
+		logger.info("Testing Logger 4");
 
 		return lines;
 	}
