@@ -77,6 +77,6 @@ jobs:
           vkey: ${{ secrets.VKEY }}
           prComment: true
           createPR: true
-          debug: false
+          debug: true
           fixType: single
           files: all
